@@ -41,4 +41,10 @@ export class ProfileServiceService {
     return promise;
 
   }
+  displayRepos(){
+    interface Apiresponse{
+      name:string,
+      description:string
+    }
+  }
 }
