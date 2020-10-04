@@ -44,7 +44,9 @@ export class ProfileServiceService {
   displayRepos(){
     interface Apiresponse{
       name:string,
-      description:string
+      description:string,
+      language:string,
+      git_url:string
     }
   }
 }
