@@ -5,7 +5,14 @@
   </div>
   <button (click)="performsearch(searchTerm)">search</button>
 </div>
-<div>
-  {{ profile.followers }}
-  {{ profile.login }}
+<div class="row">
+  <div class="col">
+    {{ profile.followers }}
+    {{ profile.login }}
+    <!-- {{ profile.avatar_url }} -->
+    <img src="{{ profile.avatar_url }}" alt="">
+    {{ profile.repos }}
+    {{ profile.email }}
+    {{ profile.following }}
+  </div>
 </div>
