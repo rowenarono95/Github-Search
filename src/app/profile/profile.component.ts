@@ -20,8 +20,10 @@ export class ProfileComponent implements OnInit {
     }, err => {
       console.log(err);
     })
+    this.profileService.displayRepos(user);
 
   }
+
   ngOnInit(): void {
     this.performsearch('rowenarono95');
   }

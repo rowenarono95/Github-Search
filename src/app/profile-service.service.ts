@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { Profile } from './profile'
+import { Repo } from './repo'
 
 
 @Injectable({
@@ -10,9 +11,12 @@ import { Profile } from './profile'
 export class ProfileServiceService {
 
   profile: Profile
+  repo:Repo
 
   constructor(private http: HttpClient) {
     this.profile = new Profile("", "", "", 0, 0, "")
+    this.repo = new Repo("","","","")
+
   }
 
 
@@ -41,21 +45,25 @@ export class ProfileServiceService {
     return promise;
 
   }
-  displayRepos(){
-    interface Apiresponse{
-      name:string,
-      description:string,
-      language:string,
-      html_url:string
+  displayRepos(user) {
+    interface Apiresponse {
+      name: string,
+      description: string,
+      language: string,
+      html_url: string
     }
 
     let promise = new Promise((resolve, reject) => {
-      let finalUrl = environment.ApiUrl + user + '?access_token=' + environment.Apikey
+      let finalUrl = environment.ApiUrl + user.value + '/repos' + '?access_token=' + environment.Apikey
       this.http.get<Apiresponse>(finalUrl).toPromise().then(response => {
-        this.profile = response;
-        resolve();
+        this.repo = response;
+        console.log(this.repo);
+
+        //this.profile = response;
+        resolve(); ``
 
       }, error => {
+        ``
         reject();
         console.log(error);
       })
