@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-profile-form',
@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileFormComponent implements OnInit {
 
+  searchName:string
+  @Output() searchUser=new EventEmitter<any>();
+
+  search(){
+    this.searchUser.emit(this.searchName)
+  }
   constructor() { }
 
   ngOnInit(): void {

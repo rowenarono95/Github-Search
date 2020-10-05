@@ -11,11 +11,11 @@ import { Repo } from './repo'
 export class ProfileServiceService {
 
   profile: Profile
-  repo:Repo
+  repo: Repo
 
   constructor(private http: HttpClient) {
     this.profile = new Profile("", "", "", 0, 0, "")
-    this.repo = new Repo("","","","")
+    this.repo = new Repo("", "", "", "")
 
   }
 
@@ -45,8 +45,8 @@ export class ProfileServiceService {
     return promise;
 
   }
-  displayRepos(user) {
-    interface Apiresponse {
+  displayRepos(user: string) {
+    interface Apiresponsee {
       name: string,
       description: string,
       language: string,
@@ -54,14 +54,16 @@ export class ProfileServiceService {
     }
 
     let promise = new Promise((resolve, reject) => {
-      let finalUrl = environment.ApiUrl + user.value + '/repos' + '?access_token=' + environment.Apikey
-      this.http.get<Apiresponse>(finalUrl).toPromise().then(response => {
+      let finalUrl = environment.ApiUrl + user + '/repos' + '?access_token=' + environment.Apikey
+      this.http.get<Apiresponsee>(finalUrl).toPromise().then(response => {
+        console.log(response);
+
         this.repo = response;
-        
-        resolve(); ``
+
+        resolve();
 
       }, error => {
-        ``
+
         reject();
         console.log(error);
       })

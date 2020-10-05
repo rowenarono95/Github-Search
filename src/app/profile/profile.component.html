@@ -22,11 +22,14 @@
 
 
 
-  <div class="search">
+  <!-- <div class="search">
     <p>Search here</p>
     <input type="text" name="search" #searchTerm placeholder="search here">
   </div>
-  <button (click)="performsearch(searchTerm)">search</button>
+  <button (click)="performsearch(searchTerm)">search</button> -->
+  <div>
+    <app-profile-form (searchUser)='performsearch($event)'></app-profile-form>
+  </div>
 
   <div class="row">
     <div class="col-sm">

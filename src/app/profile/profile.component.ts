@@ -24,6 +24,7 @@ export class ProfileComponent implements OnInit {
     })
     this.profileService.displayRepos(user).then((res) => {
       this.repos = this.profileService.repo;
+      console.log(this.repos);
     }, error => {
       console.log(error);
     })
