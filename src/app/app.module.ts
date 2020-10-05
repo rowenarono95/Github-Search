@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileFormComponent } from './profile-form/profile-form.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    ProfileFormComponent
+    ProfileFormComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
