@@ -46,7 +46,20 @@ export class ProfileServiceService {
       name:string,
       description:string,
       language:string,
-      git_url:string
+      html_url:string
     }
+
+    let promise = new Promise((resolve, reject) => {
+      let finalUrl = environment.ApiUrl + user + '?access_token=' + environment.Apikey
+      this.http.get<Apiresponse>(finalUrl).toPromise().then(response => {
+        this.profile = response;
+        resolve();
+
+      }, error => {
+        reject();
+        console.log(error);
+      })
+    })
+    return promise;
   }
 }

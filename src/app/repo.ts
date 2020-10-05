@@ -3,7 +3,7 @@ export class Repo {
         public name:string,
         public description:string,
         public language:string, 
-        public git_url:string,   
+        public html_url:string,   
 
     ){}
 }
