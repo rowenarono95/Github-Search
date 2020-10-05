@@ -1,7 +1,6 @@
 <div class="container">
 
   <nav class="navbar navbar-expand-lg navbar-dark primary-color">
-    <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -30,14 +29,17 @@
   <button (click)="performsearch(searchTerm)">search</button>
 
   <div class="row">
-    <div class="col-3">
-
+    <div class="col-md-6">
       <div class="">
 
         <div class="avatar mx-auto white">
           <img src="{{profile.avatar_url}}" class="rounded-circle" alt="woman avatar">
         </div>
+      </div>
 
+    </div>
+    <div class="col-md-6">
+      <div class="">
         <div class="card-body">
           <h4 class="card-title">{{profile.login}}</h4>
           <hr>
@@ -51,9 +53,12 @@
         </div>
 
       </div>
-
     </div>
-    <div class="col-9">
+  </div>
+
+  <div class="row">
+
+    <div>
       <ul>
         <li *ngFor='let repo of repos'>
           {{repo.name}}
@@ -63,7 +68,3 @@
   </div>
 </div>
 
-
-
-
-<!-- Card -->
