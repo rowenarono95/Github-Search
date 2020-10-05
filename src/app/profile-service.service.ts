@@ -57,9 +57,7 @@ export class ProfileServiceService {
       let finalUrl = environment.ApiUrl + user.value + '/repos' + '?access_token=' + environment.Apikey
       this.http.get<Apiresponse>(finalUrl).toPromise().then(response => {
         this.repo = response;
-        console.log(this.repo);
-
-        //this.profile = response;
+        
         resolve(); ``
 
       }, error => {
