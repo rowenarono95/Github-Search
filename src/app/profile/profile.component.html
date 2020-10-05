@@ -1,81 +1,53 @@
 <div class="container">
-<!-- 
-  <nav class="navbar navbar-expand-lg navbar-dark primary-color">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">GitHub <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">SearchUser</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-      </ul>
-    </div>
-  </nav> -->
-
-
-
-  <!-- <div class="search">
-    <p>Search here</p>
-    <input type="text" name="search" #searchTerm placeholder="search here">
-  </div>
-  <button (click)="performsearch(searchTerm)">search</button> -->
   <div>
     <app-profile-form (searchUser)='performsearch($event)'></app-profile-form>
   </div>
+  <div class="">
+    <div class="row">
+      <div class="col-sm">
+        <div class="">
 
-  <div class="row">
-    <div class="col-sm">
-      <div class="">
-
-        <div class="avatar mx-auto white">
-          <img src="{{profile.avatar_url}}" class="rounded-circle" alt="woman avatar">
-        </div>
-      </div>
-
-    </div>
-    <div class="col-sm">
-      <div class="">
-        <div class="card-body">
-          <h4 class="card-title">{{profile.login}}</h4>
-          <hr>
-          <div class="row">
-            <div class="col">
-              <p>{{profile.followers}} Followers</p>
-              <p>{{profile.following}} Following</p>
-            </div>
+          <div class="avatar mx-auto white">
+            <img src="{{profile.avatar_url}}" class="rounded-circle" alt="woman avatar">
           </div>
-          <p>{{profile.email}}</p>
         </div>
 
       </div>
+      <div class="col-sm">
+        <div class="">
+          <div class="card-body">
+            <h4 class="card-title">{{profile.login}}</h4>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <p>{{profile.followers}} Followers</p>
+                <p>{{profile.following}} Following</p>
+              </div>
+            </div>
+            <p>{{profile.email}}</p>
+          </div>
+
+        </div>
+      </div>
     </div>
-  </div>
 
 
-  <div class="row">
+    <div class="row">
 
-    <div class="col-md-6 mb-4 d-flex " *ngFor='let repo of repos'>
+      <div class="col-md-6 mb-4 d-flex " *ngFor='let repo of repos'>
 
-      <div class="card">
+        <div class="card">
 
-        <div class="card-body">
-          <h4 class="card-title">{{repo.name}}</h4>
-          <p class="card-text">{{repo.description}}</p>
-          <p>{{repo.language}}</p>
+          <div class="card-body">
+            <h4 class="card-title">{{repo.name}}</h4>
+            <p class="card-text">{{repo.description}}</p>
+            <p>{{repo.language}}</p>
+          </div>
+
         </div>
 
       </div>
 
     </div>
-
   </div>
-
 </div>

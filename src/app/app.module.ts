@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileFormComponent } from './profile-form/profile-form.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MousehoverDirective } from './mousehover.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ProfileComponent,
     ProfileFormComponent,
     AboutComponent,
-    NavbarComponent
+    NavbarComponent,
+    MousehoverDirective
   ],
   imports: [
     BrowserModule,
