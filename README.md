@@ -8,6 +8,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Description
 
 This is an app where the user can be able to come and search there their git hub repository and get to see the projects they have been working on..
+ 
+## Figma Link
+*https://www.figma.com/file/f2EdnEkiyqvWIrruyH35fV/Github-Search?node-id=0%3A1
 
 ## BDD ##
 | Behavior                  | Input                     | Output                    |
