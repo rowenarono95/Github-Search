@@ -1,53 +1,52 @@
 <div class="container">
-  <div>
+  <div class="">
     <app-profile-form (searchUser)='performsearch($event)'></app-profile-form>
   </div>
-  <div class="">
-    <div class="row">
-      <div class="col-sm">
-        <div class="">
 
-          <div class="avatar mx-auto white">
-            <img src="{{profile.avatar_url}}" class="rounded-circle" alt="woman avatar">
-          </div>
+  <div class="row">
+    <div class="col-sm">
+      <div class="">
+
+        <div class="avatar mx-auto white">
+          <img src="{{profile.avatar_url}}" class="rounded-circle" alt="woman avatar">
         </div>
-
       </div>
-      <div class="col-sm">
-        <div class="">
-          <div class="card-body">
-            <h4 class="card-title">{{profile.login}}</h4>
-            <hr>
-            <div class="row">
-              <div class="col">
-                <p>{{profile.followers}} Followers</p>
-                <p>{{profile.following}} Following</p>
-              </div>
-            </div>
-            <p>{{profile.email}}</p>
-          </div>
 
+
+    </div>
+    <div class="col-sm">
+      <div class="">
+        <div class="card-body">
+          <h4 class="card-title">{{profile.login}}</h4>
+          <hr>
+          <div class="row">
+            <div class="col">
+              <p> Followers-{{profile.followers}} </p>
+              <p> Following-{{profile.following}} </p>
+              <p> Repositories-{{profile.repos}} </p>
+              <p> Email-{{profile.email}}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-
-    <div class="row">
-
-      <div class="col-md-6 mb-4 d-flex " *ngFor='let repo of repos'>
-
-        <div class="card">
-
-          <div class="card-body">
-            <h4 class="card-title">{{repo.name}}</h4>
-            <p class="card-text">{{repo.description}}</p>
-            <p>{{repo.language}}</p>
+  <div class="row" *ngFor='let repo of repos'>
+    <div class="col pt-3">
+      <div class="card card-cascade wider reverse mt-3 repo">
+        <div class="card-body elegant-color white-text rounded-bottom text-center">
+          <h4 class="card-title"><strong>{{repo.name}}</strong></h4>
+          <p class="">{{repo.description}}</p>
+          <div class="row ml-5 h4">Language:<p class="pl-3 green-text">{{repo.language}}</p>
           </div>
-
+          <button type="button" class="btn btn-danger">
+            <a target="_blank" class="text-white" href="{{repo.html_url}}">
+              View Project
+            </a>
+          </button>
         </div>
-
       </div>
-
     </div>
   </div>
 </div>

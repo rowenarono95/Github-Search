@@ -1,4 +1,4 @@
-import { Directive,ElementRef,Renderer2,HostListener } from '@angular/core';
+import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appMousehover]'
@@ -15,7 +15,7 @@ export class MousehoverDirective {
     )
   }
   @HostListener('mouseenter') onMouseEnter() {
-    this.setBgColor('yellow')
+    this.setBgColor('green')
   }
   @HostListener('mouseleave') onMouseLeave() {
     this.setBgColor('')

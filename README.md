@@ -1,27 +1,54 @@
-# GithubApi
+# Github-Search
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
 
-## Development server
+## Author
+* Rowena Rono
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+This is an app where the user can be able to come and search there their git hub repository and get to see the projects they have been working on..
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## BDD ##
+| Behavior                  | Input                     | Output                    |
+| ------------------------- | ------------------------- | ------------------------- |
+| Search for a github profile |Enter the username of the github User name | Displays the name, username, number of repositories,Joining date, followers, following and lists the repos 
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Getting started
 
-## Running unit tests
+### Step 1:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* If you do not have the nodejs installed go ahead and install it frome [here](https://nodejs.org/en/).
 
-## Running end-to-end tests
+* Verify if all is set by running these commands: **npm --version** and node **--version**.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* Install angular with angular cli. You can follow this [guide](https://codeburst.io/how-to-build-an-angular-app-with-angular-cli-in-a-couple-of-minutes-43089d3ab272) with worked well for me
 
-## Further help
+### Step 2: 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Copy the repository url on the top right marked with green.
+* use **git clone** the url to get the project to your local computer.
+
+
+    * **git clone https://github.com/rowenarono95/Github-Search **
+*   The repo comes in a zipped or compressed format. Extract to your prefered location and open it.
+
+* now open the directory created with your favorite IDE. if VSCode type **.code** . This will lauch the editor with the project setup, 
+
+* Now feel free to hack around the project.
+
+### Step 3:
+Run **ng serve** to view the project on your local machine
+
+## Live link
+
+*
+## Technologies Used
+The application is developed using **ANGULAR CLI**
+
+### License
+
+ [[License: MIT]](Licence.md)
+
+
