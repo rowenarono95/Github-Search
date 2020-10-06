@@ -43,7 +43,7 @@ Run **ng serve** to view the project on your local machine
 
 ## Live link
 
-*
+* https://rowenarono95.github.io/Github-Search/
 ## Technologies Used
 The application is developed using **ANGULAR CLI**
 
