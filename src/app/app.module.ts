@@ -10,6 +10,7 @@ import { ProfileFormComponent } from './profile-form/profile-form.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MousehoverDirective } from './mousehover.directive';
+import { DatePipe } from './date.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MousehoverDirective } from './mousehover.directive';
     ProfileFormComponent,
     AboutComponent,
     NavbarComponent,
-    MousehoverDirective
+    MousehoverDirective,
+    DatePipe
   ],
   imports: [
     BrowserModule,
